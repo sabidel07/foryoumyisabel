@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    
+    position: relative;  /* Para mag-scroll ang navbar kasama ng page */
+    width: 100%;
+    z-index: 1; /* Ensures navbar is above other content */
+}
+
+#My\ Baby h1{
+    color: #8b1a1a;
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding-bottom: 0%;
+
+}
+
+
+/* Logo styles */
+.logo h2 {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Menu styles */
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    color: #000000; 
+    background-color: #030500;
+}
+
+/* Add click effect */
+.menu a:active {
+    color: #ffffff; /* Text color on click */
+    background-color: #ff3366; /* Background color on click (a soft pink) */
+    transform: scale(0.95); /* Shrink the button slightly on click */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow when clicked */
+}
+
+
+/* Specific colors for each menu item */
+.menu a[href="javascript:void(0)"]:nth-child(1) {
+    background-color: #bc1060; /* Tomato Red for Home button */
+}
+
+.menu a[href="javascript:void(0)"]:nth-child(2) {
+    background-color: #ffb6c1; /* Light Pink for My Baby button */
+}
+
+.menu a[href="javascript:void(0)"]:nth-child(3) {
+    background-color: #87ceeb; /* Sky Blue for Our Pictures button */
+}
+
+.menu a[href="javascript:void(0)"]:nth-child(4) {
+    background-color: #98fb98; /* Pale Green for To-Do List button */
+}
+
+/* Floating heart animation */
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+.heart {
+    position: absolute;
+    bottom: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: pink;
+    clip-path: polygon(50% 15%, 85% 15%, 100% 40%, 50% 100%, 0 40%, 15% 15%);
+    opacity: 0.6;
+    animation: float 5s linear infinite;
+    z-index: 10;
+}
+
+.heart:nth-child(1) { left: 10%; animation-duration: 6s; }
+.heart:nth-child(2) { left: 20%; animation-duration: 5s; }
+.heart:nth-child(3) { left: 40%; animation-duration: 7s; }
+.heart:nth-child(4) { left: 60%; animation-duration: 6s; }
+.heart:nth-child(5) { left: 80%; animation-duration: 5s; }
+.heart:nth-child(6) { left: 90%; animation-duration: 7s; }
+
+/* Button style for My Baby */
+.My Baby-button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #4caf50;
+    color: rgb(25, 90, 28);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Content styling */
+.content {
+    padding: 40px 20px;
+    text-align: center;
+    min-height: 100vh;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Background and color for different sections */
+#home {
+    background-color: #c55252;
+    color: #222;
+}
+
+#My\ Baby {
+    background-color: #ffcccb;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #222;
+}
+
+#Our\ pictures {
+    background-color: #add8e6;
+    color: #222;
+}
+#To\ Do\ List {
+    background-color: #8bbd8d;
+}
+#To\ Do\ List h1 {
+    color: #e6007e;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#To\ Do\ List h2 {
+    color: #e6007e;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+#To\ Do\ List p {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+#To\ Do\ List ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#To\ Do\ List li {
+    background-color: #fbe0e6;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+
+}
+
+#To\ Do\ List li a {
+    color: #e6007e;
+    text-decoration: none;
+}
+
+#To\ Do\ List li a:hover {
+    text-decoration: underline;
+}
